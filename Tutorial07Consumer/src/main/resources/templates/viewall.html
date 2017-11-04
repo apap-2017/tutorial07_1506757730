@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:replace="fragments/fragment :: header-title"></title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>
+
+        <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+        </script>
+
+    </head>
+    <body>
+        <div th:replace="fragments/fragment :: header"></div>
+        <div class="container">
+
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NPM</th>
+                    <th>Name</th>
+                    <th>GPA</th>
+                    <th>Cum laude</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="student,iterationStatus: ${students}">
+                    <th th:text="${iterationStatus.count}">
+                        No. 1
+                    </th>
+                    <th th:text="${student.npm}" name="npm">
+                        NPM
+                    </th>
+                    <th th:text="${student.name}">
+                        NPM
+                    </th>
+                    <th th:text="${student.gpa}">
+                        GPA
+                    </th>
+                    <th th:text="${student.gpa>=3.49}? 'Yes' : 'No'">
+                        Cumlaude
+                    </th>
+                    <th>
+                        <a class="btn btn-info" role="button" th:href="'/student/delete/' + ${student.npm}" > Delete Data</a>
+                    </th>
+                    <th>
+                        <a class="btn btn-info" role="button" th:href="'/student/update/' + ${student.npm}" > Update Data</a>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </body>
+</html>
+
+
+<body>
+
+
+
+</body>

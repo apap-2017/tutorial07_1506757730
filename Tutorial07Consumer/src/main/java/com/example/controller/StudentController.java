@@ -1,14 +1,14 @@
-package com.example.apaptutorial05.controller;
+package com.example.controller;
 
 import java.util.List;
 
-import com.example.apaptutorial05.model.CourseModel;
+import com.example.model.CourseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import com.example.apaptutorial05.model.StudentModel;
-import com.example.apaptutorial05.service.StudentService;
+import com.example.model.StudentModel;
+import com.example.service.StudentService;
 import javax.websocket.server.PathParam;
 
 @Controller

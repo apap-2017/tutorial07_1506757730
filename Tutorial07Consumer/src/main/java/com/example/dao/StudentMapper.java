@@ -1,9 +1,9 @@
-package com.example.apaptutorial05.dao;
+package com.example.dao;
 
 import java.util.List;
-import com.example.apaptutorial05.model.CourseModel;
+import com.example.model.CourseModel;
 import org.apache.ibatis.annotations.*;
-import com.example.apaptutorial05.model.StudentModel;
+import com.example.model.StudentModel;
 
 @Mapper
 public interface StudentMapper

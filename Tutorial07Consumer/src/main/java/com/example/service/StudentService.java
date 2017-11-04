@@ -1,9 +1,8 @@
-package com.example.apaptutorial05.service;
+package com.example.service;
 
 import java.util.List;
-
-import com.example.apaptutorial05.model.CourseModel;
-import com.example.apaptutorial05.model.StudentModel;
+import com.example.model.CourseModel;
+import com.example.model.StudentModel;
 
 public interface StudentService
 {
@@ -19,4 +18,5 @@ public interface StudentService
 
     CourseModel selectCourse (String id);
 
+    void addCourse(String npm, String idCourse);
 }

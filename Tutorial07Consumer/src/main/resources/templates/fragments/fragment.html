@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header-title" th:switch="${page}">
+    <title th:case="index">Index</title>
+    <h1 th:case="view-student">Melihat student</h1>
+    <h1 th:case="view-course">Melihat course</h1>
+    <h1 th:case="view-all">Melihat semua student</h1>
+    <h1 th:case="ubah-student">Mengubah student</h1>
+    <h1 th:case="hapus-student">Menghapus student</h1>
+    <h1 th:case="berhasil-add">Berhasil menambahkan student</h1>
+    <h1 th:case="berhasil-update">Berhasil update student</h1>
+    <h1 th:case="berhasil-delete">Berhasil delete student</h1>
+
+</head>
+<body>
+<div th:fragment="header">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/student/viewall">Daftar Mahasiswa</a></li>
+        <li><a href="/student/add">Menambah Mahasiswa</a></li>
+    </ul>
+</div>
+<div th:fragment="footer">
+    <hr/>
+    <h4>Mata Kuliah APAP</h4>
+</div>
+</body>
+</html>

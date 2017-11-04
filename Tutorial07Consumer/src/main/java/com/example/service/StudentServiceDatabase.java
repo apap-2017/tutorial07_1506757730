@@ -1,13 +1,13 @@
-package com.example.apaptutorial05.service;
+package com.example.service;
 
 import java.util.List;
 
-import com.example.apaptutorial05.model.CourseModel;
+import com.example.model.CourseModel;
 import jdk.management.resource.internal.inst.InitInstrumentation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.apaptutorial05.dao.StudentMapper;
-import com.example.apaptutorial05.model.StudentModel;
+import com.example.dao.StudentMapper;
+import com.example.model.StudentModel;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -59,5 +59,8 @@ public class StudentServiceDatabase implements StudentService
         log.info("masuk ke select course");
         return studentMapper.selectCourse(id);
     }
+
+    @Override
+    public void addCourse(String npm, String idCourse){}
 
 }
