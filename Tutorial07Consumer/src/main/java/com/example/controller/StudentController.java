@@ -3,6 +3,7 @@ package com.example.controller;
 import java.util.List;
 
 import com.example.model.CourseModel;
+import com.example.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,9 @@ public class StudentController
 {
     @Autowired
     StudentService studentDAO;
+
+    @Autowired
+    CourseService courseDAO;
 
     @RequestMapping("/")
     public String index (Model model)
@@ -133,7 +137,7 @@ public class StudentController
     @RequestMapping("/course/view/{id}")
     public String viewCourse(Model model, @PathVariable("id") String id){
         model.addAttribute("page", "view-course");
-        CourseModel course = studentDAO.selectCourse(id);
+        CourseModel course = courseDAO.selectCourse(id);
         if(course != null){
             model.addAttribute("course", course);
             return "view-course";

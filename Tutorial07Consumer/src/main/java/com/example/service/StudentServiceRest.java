@@ -39,10 +39,5 @@ public class StudentServiceRest implements StudentService
     public void updateStudent(StudentModel student) {}
     @Override
     public void addCourse(String npm, String idCourse) {}
-    @Override
-    public CourseModel selectCourse(String id){
-        CourseModel course = new CourseModel();
-        return course;
-    }
 }
 

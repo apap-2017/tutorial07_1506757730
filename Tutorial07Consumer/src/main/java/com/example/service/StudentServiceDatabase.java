@@ -55,12 +55,6 @@ public class StudentServiceDatabase implements StudentService
     }
 
     @Override
-    public CourseModel selectCourse(String id){
-        log.info("masuk ke select course");
-        return studentMapper.selectCourse(id);
-    }
-
-    @Override
     public void addCourse(String npm, String idCourse){}
 
 }
